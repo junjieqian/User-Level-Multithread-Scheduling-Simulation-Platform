@@ -2,6 +2,7 @@
  * collect the perf infomation
  */
 
+/*
 #ifdef _PERFINFO_H
 #define _PERFINFO_H_
 
@@ -33,3 +34,5 @@ int perfeventdisable(void);
 int perfeventread(int id, long long *value);
 
 #endif
+
+*/
