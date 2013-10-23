@@ -2,25 +2,14 @@
  * collect the perf information
  */
 
-//#include "perfinfo.h"
-#include <iostream>
-#include <stdlib.h>
-#include <cerrno>
-#include <cstring>
-
-#include <perfmon/pfmlib_perf_event.h>
-#include <err.h>
-
-static int enabled = 0;
-static int *perf_event_fds;
-static struct perf_event_attr *perf_event_attrs;
+#include "perfinfo.h"
 
 int perfeventinit(int numEvents)
 {
   int ret = pfm_initialize();
   if (ret != PFM_SUCCESS)
   {
-    // all following should be updated to log msg style later
+    // all following cout should be updated to log msg style later
     std::cout << "error in pfm_initialize: " << pfm_strerror(ret) << std::endl;
     return -1;
   }

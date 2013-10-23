@@ -2,17 +2,18 @@
  * collect the perf infomation
  */
 
-/*
-#ifdef _PERFINFO_H
+#ifndef _PERFINFO_H
 #define _PERFINFO_H_
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <cerrno>
+#include <cstring>
 
 // libpfm library, TBD whether need papi.h
 #include <perfmon/pfmlib_perf_event.h>
-#include <err.h>
+#include <perfmon/err.h>
 
 static int enabled = 0;
 static int *perf_event_fds;
@@ -34,5 +35,3 @@ int perfeventdisable(void);
 int perfeventread(int id, long long *value);
 
 #endif
-
-*/
