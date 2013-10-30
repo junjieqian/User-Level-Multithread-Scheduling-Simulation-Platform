@@ -2,7 +2,7 @@
  * collect the perf infomation
  */
 
-#ifndef _PERFINFO_H
+#ifndef _PERFINFO_H_
 #define _PERFINFO_H_
 
 #include <stdio.h>
@@ -13,7 +13,7 @@
 
 // libpfm library, TBD whether need papi.h
 #include <perfmon/pfmlib_perf_event.h>
-#include <perfmon/err.h>
+#include <err.h>
 
 static int enabled = 0;
 static int *perf_event_fds;
