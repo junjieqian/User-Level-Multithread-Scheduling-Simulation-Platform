@@ -1,6 +1,6 @@
 CC = g++
 DEBUG = -g
-OBJS = log.o perfinfo.o
+OBJS = log.o perfinfo.o algorithm.o cmdline.o
 CFLAGS = -c -Wall $(DEBUG) -I../include
 LDFLAGS = -pthread
 
@@ -15,6 +15,9 @@ perfinfo.o:perfinfo.cc
 
 algorithm.o:algorithm.cc
 	$(CC) $(CFLAGS) algorithm.cc
+
+cmdline.o:cmdline.cc
+	$(CC) $(CFLAGS) cmdline.cc
 
 .PHONY:clean
 
